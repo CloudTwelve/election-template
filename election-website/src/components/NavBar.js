@@ -9,13 +9,15 @@ const NavBar = (props) => {
                 electioneer
             </div>
             <nav>
-                <button class="nav-select">
-                    Candidates
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">Presidential</a>
-                    <a href="#">Treasurial</a>
-                    <a href="#">Secretarial</a>
+                <div class="dropdown">
+                    <button class="nav-select">
+                        Candidates
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Presidential</a>
+                        <a href="#">Treasurial</a>
+                        <a href="#">Secretarial</a>
+                    </div>
                 </div>
                 <div class="non-drops">
                     <a class="nav-select">
