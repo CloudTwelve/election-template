@@ -23,3 +23,25 @@ function App() {
 }
 
 export default App;
+
+/*
+
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <>
+      <Header />
+      <div class="small-title">
+        View the Candidates:
+      </div>
+      <Carousel />
+      <ToggleBar />
+    </>
+  );
+}
+
+export default App;
+
+*/
