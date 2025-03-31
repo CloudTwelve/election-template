@@ -1,0 +1,31 @@
+select {
+    width: 40%;
+    background-color: #FC9E4F;
+    height: 70%;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.6em;
+    margin-left: 0 !important;
+    color: #010114;
+    font-family: 'Outfit';
+  }
+
+  .message {
+    text-wrap: nowrap;
+    width: max-content;
+    height: 50px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: #FF6333;
+    border-radius: 5px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    filter: grayscale(0.4);
+  }
+  
+  .message * {
+    margin: 20px;
+  }
+  

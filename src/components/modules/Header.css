@@ -1,0 +1,46 @@
+.title {
+    text-shadow: #ff521b 0 0 5px;
+    color: #f2f3ae;
+    font-size: 3rem;
+    font-family: 'Outfit';
+    font-weight: 700;
+    margin: 20px;
+}
+
+header {
+  padding: 10px;
+  margin-bottom: 0;
+  z-index: 20;
+  background: #010114;
+  height: 80px;
+  min-height: 40px;
+  max-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.nav-select {
+  background-color: #010114;
+  color: #f2f3ae;
+  margin: 5px;
+  padding: 2px;
+  border-radius: 3px;
+  font-size: 15px;
+  border: none;
+  height: 80%;
+  text-align: center;
+  text-shadow: #fc9e4f 0 0 3px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+ }
+
+a:hover {color: #FC9E4F;
+    transition: 0.25s;}
