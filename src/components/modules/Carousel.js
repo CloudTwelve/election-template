@@ -49,8 +49,9 @@ const Carousel = (props) => {
     return (
         <>
             <div class="slider" style={"--width: 200px; --height: 330px; --quantity: " + props.quantity + ""}>
-            <div class="list">
-            {candidates.map((cand, index) => (<Card key={index} {...cand} />))}
+                <div class="list">
+                {candidates.map((cand, index) => (<Card key={index} {...cand} />))}
+                </div>
             </div>
             <div class="message">
                 <label for="runner-choice">You're viewing:</label>
@@ -61,8 +62,7 @@ const Carousel = (props) => {
                 </select>
             </div>
         </>
-    )
-
+    );
     };
 
-export default Carousel
+export default Carousel;
