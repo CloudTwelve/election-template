@@ -1,3 +1,25 @@
+.slider {
+  width: 100%;
+  height: var(--height);
+  padding: 10px;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent, 
+    #000,
+    transparent
+  );
+}
+
+.slider .list {
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+  position: relative;
+  margin: 10px;
+}
+
+
 .slider .list .item {
     display: block;
     margin: auto;
@@ -41,4 +63,32 @@
   .slider .item:hover { 
     transform: scale(1.1); 
     filter: grayscale(0);
+  }
+
+  .item {
+    background-color: white;
+    border-radius: 20px;
+    height: 300px;
+  }
+
+  .person-cont {
+    display: block;
+    width: 80% !important;
+    height: 15% !important;
+    font-size: 0.8rem;
+    margin-left: 10px;
+    margin-bottom: 0;
+  }
+  
+  .em-text {
+    color: #ff521b;
+    font-weight: 700;
+    font-family: 'Outfit';
+    font-size: 1.1rem;
+    filter: grayscale(0.4);
+  }
+  
+  .name {
+    display: block;
+    font-size: 0.9rem;
   }

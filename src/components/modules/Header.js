@@ -4,18 +4,18 @@ import './Header.css';
 const Header = (props) => {
     return (
         <header>
-            <div class="title">
+            <div className="title">
                 electioneer
             </div>
             <nav>
-                <div class="non-drops">
+                <div className="non-drops">
                     <a class="nav-select">
                         Candidates
                     </a>
-                    <a class="nav-select">
+                    <a className="nav-select">
                         Updates
                     </a>
-                    <a class="nav-select">
+                    <a className="nav-select">
                         Code of Conduct
                     </a>
                 </div>
@@ -23,3 +23,5 @@ const Header = (props) => {
         </header>
     );
 };
+
+export default Header;

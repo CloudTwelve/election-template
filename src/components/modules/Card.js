@@ -2,27 +2,30 @@ import React from 'react';
 import './Card.css';
 
 const Card = (props) => {
+    if (props.candType = )
     return (
-        <div class="item" style={"--position: " + props.position}>
-                <img src={props.src}></img>
-                <span class="person-cont">
-                  <span class="em-text" style="
-                                          --color: #FC9E4F
-                                          --size: 1rem;
-                                               "> President:
+        <div className="item" style={{"--position": props.position}}>
+                <img src={props.src} alt="" />
+                <span className="person-cont">
+                  <span className="em-text" style={{
+                                          color: "#FC9E4F",
+                                          fontSize: "1rem"
+                                               }}> President:
                   </span>
                   <span class="name">{props.pName}</span>
                 </span>
-                <span class="person-cont">
-                  <span class="em-text" style="
-                                          --color: #ff521b
-                                          --size: 1rem;
-                                               "> Vice President:
+                <span className="person-cont">
+                  <span className="em-text" style={{
+                                          color: "#ff521b",
+                                          fontSize: "1rem"
+                   }}> Vice President:
                   </span>
-                  <span class="name">
+                  <span className="name">
                   {props.vpName}
                   </span>
                 </span>
-              </div>
+        </div>
     );
 };
+
+export default Card;

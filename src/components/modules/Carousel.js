@@ -1,5 +1,6 @@
 import React from 'react';
 import './Carousel.css';
+import Card from './Card';
 
 const presCands = [
     {
@@ -45,15 +46,19 @@ const treasCands = [
 ];
 
 const Carousel = (props) => {
-    const [candidates, setCandidates] = React.useState(presCands); // Default to presidential candidates]
+    const [candidates, candidateType, setCandidates, setCandType] = React.useState(presCands, "presidential"); // Default to presidential candidates]
     return (
         <>
-            <div class="slider" style={"--width: 200px; --height: 330px; --quantity: " + props.quantity + ""}>
-                <div class="list">
-                {candidates.map((cand, index) => (<Card key={index} {...cand} />))}
+            <div className="slider" style={{ 
+    "--width": "200px", 
+    "--height": "330px", 
+    "--quantity": candidates.length.toString() 
+  }}>
+                <div className="list">
+                {candidates.map((cand, index) => (<Card candType={candidates} key={index} {...cand} />))}
                 </div>
             </div>
-            <div class="message">
+            <div className="message">
                 <label for="runner-choice">You're viewing:</label>
                 <select id="runner-choice" name="runner-choice">
                     <option value="presidential">Presidential</option>
