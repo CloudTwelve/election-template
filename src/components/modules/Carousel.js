@@ -45,6 +45,27 @@ const treasCands = [
     { name: "Sana Hasaba", src: "https://example.com/image11.jpg" }
 ];
 
+const changeCandidates = (e) => {
+    const selectedType = e.target.value;
+    switch (selectedType) {
+        case "presidential":
+            setCandidates(presCands);
+            setCandType("presidential");
+            break;
+        case "secretarial":
+            setCandidates(secCands);
+            setCandType("secretarial");
+            break;
+        case "treasurial":
+            setCandidates(treasCands);
+            setCandType("treasurial");
+            break;
+        default:
+            setCandidates(presCands);
+            setCandType("presidential");
+    }
+}
+
 const Carousel = (props) => {
     const [candidates, candidateType, setCandidates, setCandType] = React.useState(presCands, "presidential"); // Default to presidential candidates]
     return (
@@ -60,7 +81,7 @@ const Carousel = (props) => {
             </div>
             <div className="message">
                 <label for="runner-choice">You're viewing:</label>
-                <select id="runner-choice" name="runner-choice">
+                <select id="runner-choice" name="runner-choice" onchange={changeCandidates}>
                     <option value="presidential">Presidential</option>
                     <option value="secretarial">Secretarial</option>
                     <option value="treasurial">Treasurial</option>
