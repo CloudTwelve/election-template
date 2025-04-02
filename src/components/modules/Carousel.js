@@ -76,7 +76,7 @@ const Carousel = (props) => {
     "--quantity": candidates.length.toString() 
   }}>
                 <div className="list">
-                {candidates.map((cand, index)git => (<Card candType={candidates} key={index} {...cand} />))}
+                {candidates.map((cand, index) => (<Card candType={candidates} key={index} {...cand} />))}
                 </div>
             </div>
             <div className="message">
