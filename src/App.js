@@ -31,19 +31,17 @@ export default App;
 
 import logo from './logo.svg';
 import './App.css';
+import './dotAnimation.js'; // Import the script
 import Header from './components/modules/Header';
-import Carousel from './components/modules/Carousel';
+import { Outlet } from 'react-router-dom'; // Import Outlet to render child routes
 
 function App() {
 
   return (
     <>
+      <Header />
       <div>
-        <Header />
-        <div className="small-title">
-          View the Candidates:
-        </div>
-        <Carousel />
+        <Outlet />
       </div>
     </>
   );

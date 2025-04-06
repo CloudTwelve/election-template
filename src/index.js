@@ -1,13 +1,34 @@
 import React from 'react';
+import { 
+    createBrowserRouter,
+    createRoutesFromElements,
+    Route,
+    RouterProvider
+} from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import CodeOfConduct from './components/pages/CodeOfConduct';
+import Updates from './components/pages/Updates';
 import App from './App';
+import Candidates from './components/pages/Candidates'; // Ensure this is imported for the main route
 import reportWebVitals from './reportWebVitals';
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<App />}>
+      {/* You can add more routes here if needed */}
+      {/* Example: <Route path="updates" element={<Updates />} /> */}
+      <Route path="/candidates" element={<Candidates/>}></Route>
+      <Route path="/policies" element={<CodeOfConduct/>}></Route>
+      <Route path="/updates" element={<Updates/>}></Route>
+    </Route>
+  )
+)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

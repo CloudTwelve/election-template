@@ -1,4 +1,4 @@
-for (let i = 0; i < 75; i++)
+document.addEventListener('DOMContentLoaded', () => { for (let i = 0; i < 75; i++)
     {
       let dot = document.createElement('div');
       dot.classList.add("dot");
@@ -10,4 +10,5 @@ for (let i = 0; i < 75; i++)
       dot.style.opacity = Math.floor(Math.random() * 100) + '%';
       document.body.appendChild(dot);
   }
-  
+}
+);

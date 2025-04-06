@@ -1,5 +1,4 @@
 import React from 'react';
-import './Header.css';
 
 const Updates = () => {
     return (
@@ -8,3 +7,5 @@ const Updates = () => {
         </div>
     );
 }
+
+export default Updates;

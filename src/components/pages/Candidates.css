@@ -1,0 +1,45 @@
+* {
+    font-family: 'Inter';
+    margin: 0;
+  }
+  
+  body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #010114;
+    height: 800px;
+  }
+  
+  .dot {
+    position: absolute;
+    background-color: #FC9E4F;
+    border-radius: 20px;
+    width: 5px;
+    height: 5px;
+  }
+
+  .small-title {
+    color: #FF6333;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-shadow: #FF6333 0 0 3px;
+    filter: grayscale(0.4);
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .title {
+      font-size: 1.75rem !important;
+    }
+    .nav-select {
+      font-size: 0.75rem !important;
+    }
+    .message {
+      width: 80% !important;
+    }
+  }
