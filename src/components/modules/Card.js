@@ -2,17 +2,19 @@ import React from 'react';
 import './Card.css';
 
 const Card = (props) => {
-    if (props.candType = )
-    return (
-        <div className="item" style={{"--position": props.position}}>
-                <img src={props.src} alt="" />
+
+  switch (props.candType) {
+    case "presidential":
+      return (
+        <div className="item" style={{"--position": props.cand.position}}>
+                <img src={props.cand.src} alt="" />
                 <span className="person-cont">
                   <span className="em-text" style={{
                                           color: "#FC9E4F",
                                           fontSize: "1rem"
                                                }}> President:
                   </span>
-                  <span class="name">{props.pName}</span>
+                  <span className="name">{props.cand.pName}</span>
                 </span>
                 <span className="person-cont">
                   <span className="em-text" style={{
@@ -21,11 +23,40 @@ const Card = (props) => {
                    }}> Vice President:
                   </span>
                   <span className="name">
-                  {props.vpName}
+                  {props.cand.vpName}
                   </span>
                 </span>
         </div>
     );
+    case "secretarial":
+      return (
+        <div className="item" style={{"--position": props.cand.position}}>
+                <img src={props.cand.src} alt="" />
+                <span className="person-cont">
+                  <span className="em-text" style={{
+                                          color: "#FC9E4F",
+                                          fontSize: "1rem"
+                                               }}> Secretary:
+                  </span>
+                  <span className="name">{props.cand.name}</span>
+                </span>
+        </div>
+    );
+    case "treasurial":
+      return (
+        <div className="item" style={{"--position": props.cand.position}}>
+                <img src={props.cand.src} alt="" />
+                <span className="person-cont">
+                  <span className="em-text" style={{
+                                          color: "#FC9E4F",
+                                          fontSize: "1rem"
+                                               }}> Treasurer:
+                  </span>
+                  <span className="name">{props.cand.name}</span>
+                </span>
+        </div>
+    );
+  }
 };
 
 export default Card;

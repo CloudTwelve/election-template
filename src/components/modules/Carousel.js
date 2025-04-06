@@ -45,43 +45,50 @@ const treasCands = [
     { name: "Sana Hasaba", src: "https://example.com/image11.jpg" }
 ];
 
-const changeCandidates = (e) => {
-    const selectedType = e.target.value;
-    switch (selectedType) {
-        case "presidential":
-            setCandidates(presCands);
-            setCandType("presidential");
-            break;
-        case "secretarial":
-            setCandidates(secCands);
-            setCandType("secretarial");
-            break;
-        case "treasurial":
-            setCandidates(treasCands);
-            setCandType("treasurial");
-            break;
-        default:
-            setCandidates(presCands);
-            setCandType("presidential");
-    }
-}
+
 
 const Carousel = (props) => {
-    const [candidates, candidateType, setCandidates, setCandType] = React.useState(presCands, "presidential"); // Default to presidential candidates]
+    const [candidates, setCandidates] = React.useState(presCands); // Default to presidential candidates]
+    const [candidateType, setCandType] = React.useState("presidential"); // Default to presidential candidates
+
+    const changeCandidates = (e) => {
+        const selectedType = e.target.value;
+        switch (selectedType) {
+            case "presidential":
+                setCandidates(presCands);
+                setCandType("presidential");
+                break;
+            case "secretarial":
+                setCandidates(secCands);
+                setCandType("secretarial");
+                break;
+            case "treasurial":
+                setCandidates(treasCands);
+                setCandType("treasurial");
+                break;
+            default:
+                setCandidates(presCands);
+                setCandType("presidential");
+        }
+    }
+
     return (
         <>
             <div className="slider" style={{ 
-    "--width": "200px", 
+    "--width": "250px", 
     "--height": "330px", 
     "--quantity": candidates.length.toString() 
   }}>
-                <div className="list">
-                {candidates.map((cand, index) => (<Card candType={candidates} key={index} {...cand} />))}
+                <div className="list" style={{"--order": 0}}>
+                    {candidates.map((cand, index) => (<Card candType={candidateType} key={index} cand={cand}/>))}
                 </div>
-            </div>
+                <div className="list" style={{"--order": 1}}>
+                    {candidates.map((cand, index) => (<Card candType={candidateType} key={index} cand={cand} />))}
+                </div>
+                </div>
             <div className="message">
-                <label for="runner-choice">You're viewing:</label>
-                <select id="runner-choice" name="runner-choice" onchange={changeCandidates}>
+                <label forEach="runner-choice">You're viewing:</label>
+                <select id="runner-choice" name="runner-choice" onChange={changeCandidates}>
                     <option value="presidential">Presidential</option>
                     <option value="secretarial">Secretarial</option>
                     <option value="treasurial">Treasurial</option>

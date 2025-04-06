@@ -1,37 +1,25 @@
-.slider {
-  width: 100%;
-  height: var(--height);
-  padding: 10px;
-  overflow: hidden;
-  mask-image: linear-gradient(
-    to right,
-    transparent, 
-    #000,
-    transparent
-  );
-}
-
 .slider .list {
   display: flex;
-  width: 100%;
-  min-width: calc(var(--width) * var(--quantity));
+  justify-content: space-betwee;
+  width: calc(var(--width) * var(--quantity));
+  min-width: fit-content;
+  height: 90%;
+  margin: 0;
   position: relative;
-  margin: 10px;
+  left: 0%;
+  animation: autoRun 10s linear infinite; /* Smooth infinite animation */
 }
-
 
 .slider .list .item {
     display: block;
-    margin: auto;
+    margin: 20px;
     background-color: #F2DEA6;
-    width: calc((100 / (var(--quantity) - 1)) * 1% - 20px);
+    width: var(--width);
+    min-width: none;
     height: calc(var(--height) - 40px);
     filter: grayscale(0.3);
-    position: absolute;
-    left: 100%;
+    position: relative;
     transition: 0.5s;
-    animation: autoRun 10s linear infinite;
-    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1));
   }
   
   .slider .list .item img {
@@ -46,9 +34,10 @@
   
   @keyframes autoRun {
     from {
-      left: 100%;
-    } to {
-      left: calc(var(--width) * -1);
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
     }
   }
 
