@@ -29,7 +29,6 @@ export default App;
 
 */
 
-import logo from './logo.svg';
 import './App.css';
 import './dotAnimation.js'; // Import the script
 import Header from './components/modules/Header';

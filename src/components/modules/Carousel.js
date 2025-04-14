@@ -94,6 +94,7 @@ const Carousel = (props) => {
                     <option value="treasurial">Treasurial</option>
                 </select>
             </div>
+            <Lightbox />
         </>
     );
     };

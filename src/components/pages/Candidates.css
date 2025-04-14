@@ -43,3 +43,27 @@
       width: 80% !important;
     }
   }
+
+  .blur {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(1, 1, 20, 0.3);
+    backdrop-filter: blur(20px);
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+  }
+
+  .x { 
+    display: none;
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    font-size: 3rem;
+    font-family: 'Outfit';
+    color: #F2DEA6;
+    text-shadow: 0 0 5px #F2DEA6;
+    z-index: 13;
+  }

@@ -1,0 +1,14 @@
+.lightbox {
+    display: none;
+    position: fixed;
+    height: 80vh;
+    width: 50%;
+    background-color: #F2DEA6;
+    border-radius: 20px;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, 0);
+    box-shadow: #F2DEA6 0 0 10px;
+    filter: grayscale(0.3);
+    z-index: 12;
+  }
