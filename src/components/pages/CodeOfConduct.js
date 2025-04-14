@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../modules/Header';
 import './CodeOfConduct.css';
 
 const CodeOfConduct = (props) => {
