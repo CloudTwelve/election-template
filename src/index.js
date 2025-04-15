@@ -18,7 +18,6 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       {/* You can add more routes here if needed */}
       {/* Example: <Route path="updates" element={<Updates />} /> */}
-      <Route path="/candidates" element={<Candidates/>}></Route>
       <Route path="/policies" element={<CodeOfConduct/>}></Route>
       <Route path="/updates" element={<Updates/>}></Route>
     </Route>
