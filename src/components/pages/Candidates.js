@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React /*, { useState } */ from 'react';
 import './Candidates.css'; // Ensure you have the CSS file for styling
 import Carousel from '../modules/Carousel'; // Import the Carousel component
-import Lightbox from '../modules/Lightbox'; // Import the Lightbox component
+// import Lightbox from '../modules/Lightbox'; // Import the Lightbox component
 
 const Candidates = (props) => {
+  /*
   const [selectedCand, setSelectedCand] = useState(null);
   const [selectedType, setSelectedType] = useState(null);
 
@@ -16,12 +17,13 @@ const Candidates = (props) => {
     setSelectedCand(null);
     setSelectedType(null);
   };
+  */
     return (
         <>
         <div className="small-title">
           View the Candidates:
         </div>
-        <Carousel onCardClick={handleCardClick}/>
+        <Carousel /*onCardClick={handleCardClick}*//>
         {
           /*
         {selectedCand && (
