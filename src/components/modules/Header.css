@@ -1,3 +1,7 @@
+* {
+  font-family: 'Outfit';
+}
+
 .title {
     text-shadow: #ff521b 0 0 5px;
     color: #f2f3ae;
@@ -28,11 +32,13 @@ header {
   margin: 5px;
   padding: 2px;
   border-radius: 3px;
-  font-size: 15px;
+  font-size: 20px;
   border: none;
   height: 80%;
   text-align: center;
   text-shadow: #fc9e4f 0 0 3px;
+  text-decoration: none;
+  font-weight: 600
 }
 
 nav {

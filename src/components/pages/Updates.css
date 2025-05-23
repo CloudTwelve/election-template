@@ -1,6 +1,40 @@
-.construct {
-    color: #f2f3ae;
-    width: 80%;
-    height: 50px;
-    margin: auto;
+.updates-page {
+  font-family: 'Outfit', sans-serif;
+  color: black;
+  padding: 20px;
+}
+
+.updates-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #f67e59;
+  text-shadow: 0 0 5px #FF6333;
+  margin-bottom: 20px;
+}
+
+.update-section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #FC9E4F;
+  text-shadow: 0 0 3px #FC9E4F;
+  margin-bottom: 15px;
+}
+
+.update-card {
+  background-color: #F2DEA6;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px !important;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.candidate-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #010114;
+  margin-bottom: 10px;
 }
