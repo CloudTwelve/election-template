@@ -6,7 +6,7 @@ const Card = (props) => {
   switch (props.candType) {
     case "presidential":
       return (
-        <div className="item" style={{"--position": props.cand.position}}>
+        <div className="item" style={{"--position": props.cand.position}} onClick={props.onClick}>
                 <img src={props.cand.src} alt="" />
                 <span className="person-cont">
                   <span className="em-text" style={{

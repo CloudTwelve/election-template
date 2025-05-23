@@ -2,11 +2,13 @@ import React from 'react';
 import './Lightbox.css';
 
 const Lightbox = (props) => {
+    console.log("cand:", props.cand);
+    console.log("candType:", props.candType);
     switch (props.candType) {
         case "presidential":
             return (
                 <div className="lightbox">
-                        <img src={props.cand.src} alt="" />
+                        <img src={props.cand?.src} alt="" />
                         <span className="person-cont">
                             <span className="em-text" style={{
                                                         "--color": "#FC9E4F",
@@ -15,10 +17,10 @@ const Lightbox = (props) => {
                             </span>
                             <span className="name">{props.cand.pName}</span>
                         <span className="person-cont">
-                                <span className="em-text" style="
-                                                        --color: #ff521b
-                                                        --size: 1rem;
-                                                            "> Vice President:
+                                <span className="em-text" style={{
+                                                        "--color": "#ff521b",
+                                                        "--size": "1rem"
+                                }}> Vice President:
                                 </span>
                                 <span className="name">
                         {props.cand.vpName}
@@ -30,7 +32,7 @@ const Lightbox = (props) => {
         case "secretarial":
           return (
             <div className="lightbox">
-                <img src={props.cand.src} alt="" />
+                <img src={props.cand?.src} alt="" />
                 <span className="person-cont">
                     <span className="em-text" style={{
                                             "--color": "#FC9E4F",
@@ -44,7 +46,7 @@ const Lightbox = (props) => {
         case "treasurial":
           return (
             <div className="lightbox">
-                <img src={props.cand.src} alt="" />
+                <img src={props.cand?.src} alt="" />
                 <span className="person-cont">
                     <span className="em-text" style={{
                                             "--color": "#FC9E4F",
@@ -58,7 +60,7 @@ const Lightbox = (props) => {
         default:
             return (
                 <div className="lightbox">
-                        <img src={props.cand.src} alt="" />
+                        <img src={props.cand?.src} alt="" />
                         <span className="person-cont">
                             <span className="em-text" style={{
                                                         "--color": "#FC9E4F",
@@ -67,10 +69,10 @@ const Lightbox = (props) => {
                             </span>
                             <span className="name">{props.cand.pName}</span>
                         <span className="person-cont">
-                                <span className="em-text" style="
-                                                        --color: #ff521b
-                                                        --size: 1rem;
-                                                            "> Vice President:
+                                <span className="em-text" style={{
+                                                        "--color": "#ff521b",
+                                                        "--size": "1rem"
+                                }}> Vice President:
                                 </span>
                                 <span className="name">
                         {props.cand.vpName}
