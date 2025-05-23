@@ -22,6 +22,8 @@ const Candidates = (props) => {
           View the Candidates:
         </div>
         <Carousel onCardClick={handleCardClick}/>
+        {
+          /*
         {selectedCand && (
         <>
           <div className="blur" style={{display: "block"}}></div>
@@ -34,7 +36,9 @@ const Candidates = (props) => {
           <div className="blur"></div>
           <div className="x">X</div>
         </>
-      )}  
+      )}
+        */
+      }
       </>
     );
 }
