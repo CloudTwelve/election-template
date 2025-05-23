@@ -10,7 +10,7 @@ const Header = (props) => {
             </div>
             <nav>
                 <div className="non-drops">
-                    <Link to="/candidates" className="nav-select">
+                    <Link to="/" className="nav-select">
                         Candidates
                     </Link>
                     <Link to="/updates/" className="nav-select">
