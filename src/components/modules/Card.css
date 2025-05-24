@@ -55,6 +55,10 @@
     filter: grayscale(0);
   }
 
+  .slider:hover .list {
+    animation-play-state: paused !important;
+  }
+  
   .item {
     background-color: white;
     border-radius: 20px;
